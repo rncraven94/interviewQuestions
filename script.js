@@ -28,4 +28,37 @@ function fizzFuzz(n) {
 }
 
 // fizzFuzz(250);
-//
+
+// 10 23 23
+function findSingleNumber(nums) {
+  let result = 0;
+
+  for (let num of nums) {
+    result ^= num;
+    //the reason why this works is the xor operator, which cancels out any pair, leaving only behind the single number
+  }
+
+  return result;
+}
+
+// console.log(findSingleNumber([1, 2, 3, 4, 1, 2]));
+
+//sum of two integers without addition
+
+function sumTwoIntegers(a, b) {
+  while (b !== 0) {
+    console.log(a, b);
+    const carry = a & b;
+    //calculate the carry without adding (xor)
+    console.log(a, b);
+    a = a ^ b;
+    console.log(a, b);
+    //add a and b without carry (xor)
+    b = carry << 1;
+    console.log(a, b);
+    // shift the carry one position to the left (carry << 1)
+  }
+  return a;
+}
+
+console.log(sumTwoIntegers(14, 15));
