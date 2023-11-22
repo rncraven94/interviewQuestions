@@ -62,3 +62,25 @@ function sumTwoIntegers(a, b) {
 }
 
 console.log(sumTwoIntegers(14, 15));
+
+//////////////////////////////////////////////////////////////////////
+const strings = ["a", "b", "c", "d"];
+console.log(strings[2]);
+
+//push
+
+strings.push("e");
+console.log(strings);
+
+// pop
+
+strings.pop();
+console.log(strings);
+
+//unshift
+strings.unshift("x");
+console.log(strings);
+
+//splice
+strings.splice(2, 0, "alien");
+console.log(strings);
