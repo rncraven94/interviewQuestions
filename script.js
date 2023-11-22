@@ -126,3 +126,16 @@ newArray.push("you");
 newArray.push("!");
 newArray.delete(1);
 console.log(newArray);
+
+/////////////////////////////
+// reverse a string
+
+function reverse(str) {
+  const newWord = [];
+  for (let i = str.length; i >= 0; i--) {
+    newWord.push(str[i]);
+  }
+  return newWord.join("");
+}
+
+console.log(reverse("Hello, my nme is Robert"));
