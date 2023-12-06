@@ -139,3 +139,35 @@ function reverse(str) {
 }
 
 console.log(reverse("Hello, my nme is Robert"));
+
+// merge sorted arrays
+
+function mergeSortedArrays(arr1, arr2) {
+  const merged = [];
+  let arrayItem1 = arr1[0];
+  let arrayItem2 = arr2[0];
+  let i = 1;
+  let j = 1;
+  // check input
+  if (arr1.length === 0) {
+    return arr2;
+  }
+  if (arr2.length === 0) {
+    return arr1;
+  }
+  while (arrayItem1 || arrayItem2) {
+    if (!arrayItem2 || arrayItem1 < arrayItem2) {
+      merged.push(arrayItem1);
+      arrayItem1 = arr1[i];
+      i++;
+    } else {
+      merged.push(arrayItem2);
+      arrayItem2 = arr2[j];
+      j++;
+    }
+  }
+  // console.log(merged);
+  return merged;
+}
+
+console.log(mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]));
