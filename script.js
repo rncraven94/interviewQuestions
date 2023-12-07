@@ -171,3 +171,21 @@ function mergeSortedArrays(arr1, arr2) {
 }
 
 console.log(mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]));
+// two sums
+
+function twoSum(arr1, target) {
+  let arrayOne = arr1[0];
+  let arrayTwo = arr1[1];
+  let i = 1;
+  let j = 2;
+  if (arrayOne + arrayTwo === target) {
+    return [arrayOne, arrayTwo];
+  }
+  while (arrayOne || arrayTwo) {
+    if (!target === arrayOne + arrayTwo) {
+      arrayTwo = arr1[j];
+      j++;
+    }
+  }
+}
+console.log(twoSum([1, 2, 3], 4));
