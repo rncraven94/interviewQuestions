@@ -178,14 +178,25 @@ function twoSum(arr1, target) {
   let arrayTwo = arr1[1];
   let i = 1;
   let j = 2;
+  let k = 2;
+  let l = 3;
   if (arrayOne + arrayTwo === target) {
     return [arrayOne, arrayTwo];
   }
   while (arrayOne || arrayTwo) {
+    if (arrayTwo > arr1.length) {
+      arrayTwo = arr1[l];
+      j = l;
+      arrayOne = arr1[k];
+      i = k;
+      k++;
+      l++;
+    }
     if (!target === arrayOne + arrayTwo) {
       arrayTwo = arr1[j];
       j++;
     }
   }
 }
-console.log(twoSum([1, 2, 3], 4));
+
+console.log(twoSum([1, 1, 2], 3));
