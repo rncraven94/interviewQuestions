@@ -176,27 +176,14 @@ console.log(mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]));
 function twoSum(arr1, target) {
   let arrayOne = arr1[0];
   let arrayTwo = arr1[1];
-  let i = 1;
-  let j = 2;
-  let k = 2;
-  let l = 3;
-  if (arrayOne + arrayTwo === target) {
-    return [arrayOne, arrayTwo];
-  }
-  while (arrayOne || arrayTwo) {
-    if (arrayTwo > arr1.length) {
-      arrayTwo = arr1[l];
-      j = l;
-      arrayOne = arr1[k];
-      i = k;
-      k++;
-      l++;
-    }
-    if (!target === arrayOne + arrayTwo) {
-      arrayTwo = arr1[j];
-      j++;
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 1; j < arr1.length; j++) {
+      console.log(arr1[i], arr1[j]);
+      if (arr1[i] + arr1[j] === target) {
+        return [arr1[i], arr1[j]];
+      }
     }
   }
 }
 
-console.log(twoSum([1, 1, 2], 3));
+console.log(twoSum([6, 1, 2], 4));
