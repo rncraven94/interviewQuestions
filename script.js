@@ -187,3 +187,22 @@ function twoSum(arr1, target) {
 }
 
 console.log(twoSum([6, 1, 2], 4));
+
+////////////////// rotate an array
+
+function rotateArray(arr1, rotate) {
+  if (rotate < 1) {
+    return null;
+  }
+  const futureRotatedNumber = arr1[rotate - 1];
+  const swappedNumber = arr1[0];
+  arr1.splice(rotate - 1, 1, swappedNumber);
+  arr1.unshift();
+  arr1.unshift(futureRotatedNumber);
+  return arr1;
+}
+
+console.log(rotateArray([9, 8, 7, 6, 4, 1, 5, 9, 8], 5));
+console.log(
+  rotateArray([546, 165, 987, 615, 6149514, 12311, 464, 46, 4654], 6)
+);
