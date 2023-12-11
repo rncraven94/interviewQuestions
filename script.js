@@ -206,3 +206,17 @@ console.log(rotateArray([9, 8, 7, 6, 4, 1, 5, 9, 8], 5));
 console.log(
   rotateArray([546, 165, 987, 615, 6149514, 12311, 464, 46, 4654], 6)
 );
+
+// move zeros
+
+function moveZeros(arr1) {
+  const arr2 = [];
+  for (let i = 0; i > arr1.length; i++) {
+    if (arr1[i] === 0) {
+      console.log(arr1[i]);
+    }
+  }
+  return arr1;
+}
+
+console.log(moveZeros([1, 2, 3, 0]));
