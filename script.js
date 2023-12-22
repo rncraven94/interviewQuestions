@@ -208,7 +208,7 @@ console.log(
 );
 
 // move zeros
-//////////////////////
+////////////////////////
 function moveZeros(arr1) {
   const arr2 = [];
   for (let i = 0; i > arr1.length; i++) {
